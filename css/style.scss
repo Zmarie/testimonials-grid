@@ -1,0 +1,146 @@
+/* general base styles */
+body {
+    background: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container {
+    width: 70%;
+    max-width: 1111px;
+    margin: 4.5em auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: .625em;    
+}
+
+/*----- Testimonials -----*/
+.item1 {
+    grid-column: 1/9;
+    border-radius: 8px;
+    background: hsl(263, 55%, 52%) url(../images/bg-pattern-quotation.svg) top 5% right 10% no-repeat;
+    padding: 1.438em 1.813em;
+}
+
+figure img {
+    border-radius: 50%;
+    border: 2px solid #A57FD2;
+}
+
+.verified-graduate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.25em;
+
+    .verified {
+        flex-direction: column;
+        margin-left: 1em;
+        color: hsl(210,46,95);
+        line-height: 1.5;
+    }
+
+    p.alumn-grad {
+        opacity: 50%;
+    }
+}
+
+article.testimonial-quote {
+    color: hsl(210,46,95);
+}
+
+article.testimonial-quote h2 {  
+    font-size: 1.25em;
+    line-height: 1.3;
+    margin-bottom: 1.563em;
+}
+
+article.testimonial-quote p {
+   font-size: .813em;
+   line-height: 2;
+   opacity: 70%;
+}
+
+.item2 {
+    background: hsl(217, 19%, 35%);
+    grid-column: 1/9;
+    border-radius: 8px;
+    padding: 1.438em 1.813em;
+
+    figure img {
+        border: 0;
+    }
+}
+.item3,
+.item5 {
+    background: hsl(0, 0%, 100%);
+    grid-column: 1/9;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px #d3d6dc;
+    padding: 1.438em 1.813em;
+
+    figure img {
+        border: 0;
+    }
+
+    .verified {
+        color: #3D414C;
+    }
+
+    article.testimonial-quote {
+        color: #3D414C;
+    }
+}
+
+.item4{
+    background: hsl(219, 29%, 14%);
+    grid-column: 1/9;
+    border-radius: 8px;
+    padding: 1.438em 1.813em;
+}
+
+.testimonial-1 {
+    color: hsl(0, 0%, 81%);
+}
+
+
+
+
+@media screen and (min-width: 70em) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.25em;    
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .item1 {
+        grid-column: 1/7;
+    }
+
+    .item2 {
+        grid-column: 7/10;
+    }
+
+    .item3 {
+        grid-column: 1/4;
+    }
+
+    .item4 {
+        grid-column: 4/10;
+    }
+
+    .item5 {
+        grid-column: 10/13;
+        grid-row: 1 / span 2;
+    }
+
+    article.testimonial-quote h2 {
+        margin-bottom: 1.25em;
+    }
+}
